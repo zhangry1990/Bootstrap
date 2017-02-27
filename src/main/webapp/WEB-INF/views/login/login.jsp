@@ -74,8 +74,8 @@
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
                     success: function (data) {
-                        alert(data);
                         //table赋值方式待定
+                        alert(data["pageSize"]);
                         gridTable.pageSize = data["pageSize"];
                         gridTable.pageNumber = data["pageNumber"];
                     },

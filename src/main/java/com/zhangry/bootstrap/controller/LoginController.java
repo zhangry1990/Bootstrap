@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class LoginController {
 
     @RequestMapping(value = "/getUserList", method = RequestMethod.POST)
-    public String getUserList() {
-        String str = "{data : {\"id\" : \"123456789\", \"name\" : \"Tom\", \"sex\" : \"nan\", \"age\" : \"20\", \"address\" : \"China\"}";
-        return str;
+    public JsonView getUserList() {
+        String str = "{data : {\"id\" : \"123456789\", \"name\" : \"Tom\", \"sex\" : \"nan\", \"age\" : \"20\", \"address\" : \"China\"}}";
+        return new JsonView(str.toString());
     }
 }
